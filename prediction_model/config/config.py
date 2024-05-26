@@ -19,4 +19,3 @@ TEMPORAL_FEATURES=['ApplicantIncome']
 TEMPORAL_ADDITION='CoapplicantIncome'
 LOG_FEATURES=['ApplicantIncome', 'LoanAmount'] #Features for Log Transformation
 DROP_FEATURES=['CoapplicantIncome'] #Features to Drop
-
