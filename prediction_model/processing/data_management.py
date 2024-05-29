@@ -26,6 +26,6 @@ def save_pipeline(pipeline_to_save):
 
 def load_pipeline(pipeline_to_load):
 	"""Importing pickle file of trained Model"""
-	save_path = os.path.join(config.SAVED_MODEL_PATH, pipeline_to_load
+	save_path = os.path.join(config.SAVED_MODEL_PATH, pipeline_to_load)
 	trained_model = joblib.load(save_path)
 	return trained_model

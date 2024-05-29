@@ -1,1 +1,6 @@
 .idea/
+prediction_model/__pycache__/
+prediction_model/config/__pycache__/
+prediction_model/processing/__pycache__/
+test/__pycache__/
+

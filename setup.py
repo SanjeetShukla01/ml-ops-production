@@ -2,8 +2,7 @@ import io
 import os
 from pathlib import Path
 
-from setuptools import find_packages#, setup
-from distutils.core import setup #
+from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'prediction_model'
@@ -11,7 +10,7 @@ DESCRIPTION = 'Train and deploy prediction model'
 URL = 'https://github.com/sanjeetshukla01/ml-ops-production'
 EMAIL = 'sanjeets1900@gmail.com'
 AUTHOR = 'Sanjeet Shukla'
-REQUIRES_PYTHON = '>=3.6.0'
+REQUIRES_PYTHON = '>=3.10.0'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -57,7 +56,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
