@@ -4,3 +4,6 @@ prediction_model/config/__pycache__/
 prediction_model/processing/__pycache__/
 test/__pycache__/
 
+build/
+dist/
+prediction_model.egg-info/

@@ -20,6 +20,7 @@ def save_pipeline(pipeline_to_save):
 	"""
 	save_file_name = 'classification_v1.pkl'
 	save_path = os.path.join(config.SAVED_MODEL_PATH, save_file_name)
+	print(f"path-----------------: {save_path}")
 
 	joblib.dump(pipeline_to_save, save_path)
 	print("Saved Pipeline : ",save_file_name)
