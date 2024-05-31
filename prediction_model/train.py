@@ -15,9 +15,10 @@ from sklearn import metrics
 import mlflow
 
 # mlflow.set_tracking_uri('http://localhost:5000')
+# mlflow.set_tracking_uri('file:/home/suhas/test/src/mlruns')
 
 # Reading the data
-data = pd.read_csv("loan_dataset.csv")
+data = pd.read_csv("datasets/loan_dataset.csv")
 num_col = data.select_dtypes(include=['int64', 'float64']).columns.tolist()
 cat_col = data.select_dtypes(include=['object']).columns.tolist()
 cat_col.remove('Loan_Status')
@@ -76,7 +77,7 @@ rf_gs = GridSearchCV(
 )
 rf_model = rf_gs.fit(X_train, y_train)
 
-# ______________Logistic Regresssion__________________________#
+# ______________Logistic Regression__________________________#
 
 lr = LogisticRegression(random_state=SEED)
 lr_param_grid = {
