@@ -7,3 +7,4 @@ test/__pycache__/
 build/
 dist/
 prediction_model.egg-info/
+mlruns/
