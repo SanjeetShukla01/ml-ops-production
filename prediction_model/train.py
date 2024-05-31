@@ -18,7 +18,7 @@ import mlflow
 # mlflow.set_tracking_uri('file:/home/suhas/test/src/mlruns')
 
 # Reading the data
-data = pd.read_csv("datasets/loan_dataset.csv")
+data = pd.read_csv("prediction_model/datasets/loan_dataset.csv")
 num_col = data.select_dtypes(include=['int64', 'float64']).columns.tolist()
 cat_col = data.select_dtypes(include=['object']).columns.tolist()
 cat_col.remove('Loan_Status')
@@ -26,10 +26,10 @@ cat_col.remove('Loan_ID')
 
 # Creating list of categorical and numerical variables
 for col in cat_col:
-    data[col].fillna(data[col].mode()[0], inplace=True)
+    data[col] = data[col].fillna(data[col].mode()[0])
 
 for col in num_col:
-    data[col].fillna(data[col].median(), inplace=True)
+    data[col] = data[col].fillna(data[col].median())
 
 # Clipping extreme values
 data[num_col] = data[num_col].apply(lambda x: x.clip(*x.quantile([0.05, 0.95])))
@@ -49,8 +49,13 @@ for col in cat_col:
 
 data['Loan_Status'] = le.fit_transform(data['Loan_Status'])
 
+# Inspecting the DataFrame
+print(data.head())  # Display the first few rows of the DataFrame
+data.info()         # Display a concise summary of the DataFrame
+data.describe()     # Generate descriptive statistics
+
 # Train test split
-X = data.drop(['Loan_Status', 'Loan_ID'], 1)
+X = data.drop(['Loan_Status', 'Loan_ID'], axis=1)
 y = data.Loan_Status
 
 SEED = 1
