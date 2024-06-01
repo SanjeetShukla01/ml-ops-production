@@ -123,7 +123,7 @@ dt_gs = GridSearchCV(
 dt_model = dt_gs.fit(X_train, y_train)
 
 
-# mlflow.set_experiment("Loan_prediction")
+mlflow.set_experiment("Loan_prediction")
 
 # Model evelaution metrics
 def model_metrics(actual, pred):
