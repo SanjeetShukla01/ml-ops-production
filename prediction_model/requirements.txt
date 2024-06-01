@@ -1,0 +1,22 @@
+# model building requirements
+joblib==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+scipy==1.13.1
+
+# testing requirements
+pytest==8.2.1
+requests
+
+# packaging
+setuptools==70.0.0
+wheel==0.43.0
+
+# FastAPI app requirements
+fastapi==0.111.0
+fastapi-cli==0.0.4
+gunicorn==22.0.0
+uvicorn==0.30.0
+pydantic==2.7.2
+pydantic_core==2.18.3
