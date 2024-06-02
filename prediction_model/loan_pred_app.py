@@ -8,8 +8,8 @@ import pandas as pd
 
 app = FastAPI()
 # loading the trained model
-trained_model = 'trained_model/model_rf.pkl'
-# pickle_in = open(trained_model, 'rb')
+trained_model = 'trained_models/model_rf.pkl'
+# pickle_in = open(trained_models, 'rb')
 model = pickle.load(open(trained_model, 'rb'))
 
 
@@ -43,6 +43,7 @@ def predict_loan_status(loan_details: LoanPred):
 		pred = 'Approved'
 
 	return {'status':pred}
+
 
 if __name__ == '__main__':
 	uvicorn.run(app, host='127.0.0.1', port=8000)

@@ -92,3 +92,7 @@ Train command
  python train_doc.py –experiment-name Loan_prediction
  python train_api.py –experiment-name Loan_prediction
 ```
+
+
+pydantic vs dataclass when to use.
+Why it is named fast-api
