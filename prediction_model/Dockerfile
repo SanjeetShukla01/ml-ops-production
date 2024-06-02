@@ -17,7 +17,7 @@ RUN chmod +x train_doc.py
 # STEP 6: Install required pyhton dependencies from requirements file
 RUN pip install -r requirements.txt
 
-# STEP 7: Run train.py file
+# STEP 7: Run train_flask.py file
 ENTRYPOINT ["python"]
 
 CMD ["train_doc.py"]

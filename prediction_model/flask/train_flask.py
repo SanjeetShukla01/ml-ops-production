@@ -11,7 +11,7 @@ from sklearn import metrics
 import pickle
 
 # Loading the data
-data = pd.read_csv("data/loan_dataset.csv")
+data = pd.read_csv("../datasets/loan_dataset.csv")
 
 # Missing value treatent (if found)
 num_col = data.select_dtypes(include=['int64','float64']).columns.tolist()
@@ -59,12 +59,12 @@ model.fit(X, y)
 
 # saving the model 
 
-pickle_model = open("trained_model/model_rf.pkl", mode = "wb") 
+pickle_model = open("trained_model/model_rf.pkl", mode ="wb")
 pickle.dump(model, pickle_model) 
 pickle_model.close()
 
 # loading the trained model
-pickle_model = open('trained_model/model_rf.pkl', 'rb') 
+pickle_model = open('trained_model/model_rf.pkl', 'rb')
 model_rf = pickle.load(pickle_model)
 
 prediction = model_rf.predict([[1, 1, 6000, 150, 0]])

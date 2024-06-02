@@ -11,7 +11,7 @@ app = Flask(__name__)
 port = int(os.environ.get("PORT", 80))
 
 # Loading the trained model
-pickle_in = open('trained_model/model_rf.pkl', 'rb') 
+pickle_in = open('trained_model/model_rf.pkl', 'rb')
 model = pickle.load(pickle_in)
 
 # Views

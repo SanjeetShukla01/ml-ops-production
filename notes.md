@@ -14,7 +14,7 @@ entry_points:
     parameters:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
-    command: "python train.py --alpha {alpha} --l1_ratio {l1_ratio}"
+    command: "python train_flask.py --alpha {alpha} --l1_ratio {l1_ratio}"
 
 ```
 
@@ -30,7 +30,7 @@ entry_points:
     parameters:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
-    command: "python train.py --alpha {alpha} --l1_ratio {l1_ratio}"
+    command: "python train_flask.py --alpha {alpha} --l1_ratio {l1_ratio}"
 
 ```
 
@@ -96,3 +96,17 @@ Train command
 
 pydantic vs dataclass when to use.
 Why it is named fast-api
+
+
+```cmd
+# FastAPI
+ uvicorn loan_pred_app:app --reload
+ 
+# Streamlit 
+ streamlit run streamlit_app.py
+
+# Flask
+ export PORT=4500
+ python /home/sanjeet/Desktop/git_pod_el/ml-ops-production/prediction_model/flask/app.py
+
+```
