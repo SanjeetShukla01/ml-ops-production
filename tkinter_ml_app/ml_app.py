@@ -2,8 +2,9 @@ from tkinter import *
 
 import joblib
 
-trained_model = 'E:/tkinter_ml_app/trained_model/model.pkl'
+trained_model = 'trained_model/model.pkl'
 model = joblib.load(trained_model)
+
 
 class MyWindow:
     def __init__(self, win):
