@@ -103,8 +103,8 @@ class MainApp(MDApp):
         ApplicantIncome = self.help_string.get_screen('main').ids.input_3.text
         LoanAmount = self.help_string.get_screen('main').ids.input_4.text
         Credit_History = self.help_string.get_screen('main').ids.input_5.text
-        # url = f'http://127.0.0.1:8000/predict_status?gender={Gender}&married={Married}&income={ApplicantIncome}&loan_amt={LoanAmount}&credit_hist={Credit_History}'
-        url = f'https://fastapi-appl.herokuapp.com/predict?gender={Gender}&married={Married}&income={ApplicantIncome}&loan_amt={LoanAmount}&credit_hist={Credit_History}'
+        url = f'http://0.0.0.0:4000//predict_status?gender={Gender}&married={Married}&income={ApplicantIncome}&loan_amt={LoanAmount}&credit_hist={Credit_History}'
+        # url = f'https://fastapi-appl.herokuapp.com/predict?gender={Gender}&married={Married}&income={ApplicantIncome}&loan_amt={LoanAmount}&credit_hist={Credit_History}'
         self.request = UrlRequest(url=url, on_success=self.res, ca_file=cfi.where(), verify=True)
 
     def res(self, *args):

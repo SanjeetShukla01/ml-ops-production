@@ -8,3 +8,5 @@ build/
 dist/
 prediction_model.egg-info/
 mlruns/
+KivyML/__pycache__/
+prediction_model/flask/__pycache__/
