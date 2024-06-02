@@ -85,3 +85,8 @@ curl -X POST \
      http://localhost:1234/invocations
 ```
 
+Train command
+
+```cmd
+python train_doc.py –experiment-name Loan_prediction
+```
