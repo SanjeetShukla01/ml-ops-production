@@ -3,10 +3,10 @@ import pickle
 import streamlit as st
  
 # loading the trained model
-trained_model = 'trained_model/model_rf.pkl'
+trained_model = 'trained_models/model_rf.pkl'
 model = pickle.load(open(trained_model, 'rb'))
  
-@st.cache()
+@st.cache_data()
   
 # Following function will make the prediction based on data provided by user 
 def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):   
