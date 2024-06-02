@@ -88,5 +88,7 @@ curl -X POST \
 Train command
 
 ```cmd
-python train_doc.py –experiment-name Loan_prediction
+ python train.py –experiment-name Loan_prediction
+ python train_doc.py –experiment-name Loan_prediction
+ python train_api.py –experiment-name Loan_prediction
 ```
