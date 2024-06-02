@@ -93,11 +93,15 @@ Train command
  python train_api.py –experiment-name Loan_prediction
 ```
 
+- Pydantic vs dataclass when to use which
+- Why it is named fast-api
+- Warnings: 
 
-pydantic vs dataclass when to use.
-Why it is named fast-api
+` UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+`
 
-
+### Run Commands
 ```cmd
 # FastAPI
  uvicorn loan_pred_app:app --reload
